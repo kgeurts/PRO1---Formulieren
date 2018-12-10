@@ -16,15 +16,30 @@ img {
     margin-left:5px;
     display:inline
 }
-#select {
+#welbevinden label {
   display: inline-block;
   padding: 1em;
   cursor: pointer;
   text-align: center;
+  /* background-color: pink; */
 }
-#inputSelect{
+#zin label {
+  display: inline-block;
+  padding: 1em;
+  cursor: pointer;
+  text-align: center;
+  /* background-color: pink; */
+}
+#welbevinden input{
+  display: block;
+
+}
+
+#zin input{
   display: block;
 }
+
+
 li {
 	font-weight: bold;
 }
@@ -44,60 +59,62 @@ li {
 <p>Om een eerste stap te zetten naar een persoonlijk opledingsplan zul je eerst een paar vragen voor jezelf moeten beantwoorden. Dit formulier helpt jou daar bij.</p>
 
 <form action="http://bla.hosts.ma-cloud.nl/pop.php" method="get">
- <label>Naam:</label> <input type="text" name="naam" placeholder="Vul hier je naam in">  
- <label >In welke klas zit jij?</label>
-    <select name="klas"  >
+ <label>Naam: *</label> <input required type="text" name="naam" placeholder="Vul hier je naam in">  
+ <br>
+ <label >In welke klas zit jij? *</label>
+    <select name="klas" required>
+       <option value="" selected disabled hidden>Kies een klas</option>
        <option value="MG1A">MG1A</option>
        <option value="MG1B">MG1B</option>
        <option value="MG1C">MG1C</option>
        <option value="MG1D">MG1D</option>
    </select>
-
-<fieldset > 
+<br><br>
+<fieldset id=welbevinden > 
 <legend>Welbevinden op de opleiding</legend>
 
 <p>Hoe positief ben je op dit moment met over je opleiding?</p>
 
-<label id= select><input id="inputSelect" type="radio" name="positief" value="1">1</label>
-<label id="select"><input id="inputSelect" type="radio" name="positief" value="2">2</label>
-<label id="select"><input id="inputSelect" type="radio" name="positief" value="3">3</label>
-<label id="select"><input id="inputSelect" type="radio" name="positief" value="4">4</label>
-<label id="select"><input id="inputSelect" type="radio" name="positief" value="5">5</label>
-<label id="select"><input id="inputSelect" type="radio" name="positief" value="6">6</label>
-<label id="select"><input id="inputSelect" type="radio" name="positief" value="7">7</label>
-<label id="select"><input id="inputSelect" type="radio" name="positief" value="8">8</label>
-<label id="select"><input id="inputSelect" type="radio" name="positief" value="9">9</label>
-<label id="select"><input id="inputSelect" type="radio" name="positief" value="10">10</label>
+<label> <input type="radio" name="positief" value="1">1</label>
+<label> <input type="radio" name="positief" value="2">2</label>
+<label> <input type="radio" name="positief" value="3">3</label>
+<label> <input type="radio" name="positief" value="4">4</label>
+<label> <input type="radio" name="positief" value="5">5</label>
+<label> <input type="radio" name="positief" value="6">6</label>
+<label> <input type="radio" name="positief" value="7">7</label>
+<label> <input type="radio" name="positief" value="8">8</label>
+<label> <input type="radio" name="positief" value="9">9</label>
+<label> <input type="radio" name="positief" value="10">10</label>
 
 
 
 <p>Hoe gemotiveerd ben je momenteel om de opleiding af te maken?</p>
 
-<label id="select"><input id="inputSelect" type="radio" name="Motivatie" value="1">1</label>
-<label id="select"><input id="inputSelect" type="radio" name="Motivatie" value="2">2</label>
-<label id="select"><input id="inputSelect" type="radio" name="Motivatie" value="3">3</label>
-<label id="select"><input id="inputSelect" type="radio" name="Motivatie" value="4">4</label>
-<label id="select"><input id="inputSelect" type="radio" name="Motivatie" value="5">5</label>
-<label id="select"><input id="inputSelect" type="radio" name="Motivatie" value="6">6</label>
-<label id="select"><input id="inputSelect" type="radio" name="Motivatie" value="7">7</label>
-<label id="select"><input id="inputSelect" type="radio" name="Motivatie" value="8">8</label>
-<label id="select"><input id="inputSelect" type="radio" name="Motivatie" value="9">9</label>
-<label id="select"><input id="inputSelect" type="radio" name="Motivatie" value="10">10 </label>
+<label> <input type="radio" name="Motivatie" value="1">1</label>
+<label> <input type="radio" name="Motivatie" value="2">2</label>
+<label> <input type="radio" name="Motivatie" value="3">3</label>
+<label> <input type="radio" name="Motivatie" value="4">4</label>
+<label> <input type="radio" name="Motivatie" value="5">5</label>
+<label> <input type="radio" name="Motivatie" value="6">6</label>
+<label> <input type="radio" name="Motivatie" value="7">7</label>
+<label> <input type="radio" name="Motivatie" value="8">8</label>
+<label> <input type="radio" name="Motivatie" value="9">9</label>
+<label> <input type="radio" name="Motivatie" value="10">10 </label>
 
 
 
 <p>Hoeveel vertrouwen heb je momenteel in je eigen kunnen?</p>
 
-<label id="select"><input id="inputSelect" type="radio" name="vertrouwen" value="1">1</label>
-<label id="select"><input id="inputSelect" type="radio" name="vertrouwen" value="2">2</label>
-<label id="select"><input id="inputSelect" type="radio" name="vertrouwen" value="3">3</label>
-<label id="select"><input id="inputSelect" type="radio" name="vertrouwen" value="4">4</label>
-<label id="select"><input id="inputSelect" type="radio" name="vertrouwen" value="5">5</label>
-<label id="select"><input id="inputSelect" type="radio" name="vertrouwen" value="6">6</label>
-<label id="select"><input id="inputSelect" type="radio" name="vertrouwen" value="7">7</label>
-<label id="select"><input id="inputSelect" type="radio" name="vertrouwen" value="8">8</label>
-<label id="select"><input id="inputSelect" type="radio" name="vertrouwen" value="9">9</label>
-<label id="select"><input id="inputSelect" type="radio" name="vertrouwen" value="10">10 </label>
+<label> <input type="radio" name="vertrouwen" value="1">1</label>
+<label> <input type="radio" name="vertrouwen" value="2">2</label>
+<label> <input type="radio" name="vertrouwen" value="3">3</label>
+<label> <input type="radio" name="vertrouwen" value="4">4</label>
+<label> <input type="radio" name="vertrouwen" value="5">5</label>
+<label> <input type="radio" name="vertrouwen" value="6">6</label>
+<label> <input type="radio" name="vertrouwen" value="7">7</label>
+<label> <input type="radio" name="vertrouwen" value="8">8</label>
+<label> <input type="radio" name="vertrouwen" value="9">9</label>
+<label> <input type="radio" name="vertrouwen" value="10">10 </label>
 
 </fieldset>
 
@@ -105,22 +122,22 @@ li {
 <legend>Sterke kanten</legend>	
 <p>Wat zijn je sterke kanten in programmeren?</p>
 
-<input type="checkbox" name="Sterke_kanten_HTML" value="Coderen in HTML/CSS">Coderen in HTML/CSS
-<input type="checkbox" name="Sterke_kanten_Java" value="">Programmeren in Java
-<input type="checkbox" name="Sterke_kanten_JS" value="Scripting: Programmeren in Javascript">Scripting: Programmeren in Javascript
-<input type="checkbox" name="Sterke_kanten_Planning" value="Planning">Planning
-<input type="checkbox" name="Sterke_kanten_Samenwerken" value="Samenwerken">Samenwerken
+<label> <input type="checkbox" name="Sterke_kanten_HTML" value="Coderen in HTML/CSS">Coderen in HTML/CSS</label>
+<label> <input type="checkbox" name="Sterke_kanten_Java" value="">Programmeren in Java</label>
+<label> <input type="checkbox" name="Sterke_kanten_JS" value="Scripting: Programmeren in Javascript">Scripting: Programmeren in Javascript</label>
+<label> <input type="checkbox" name="Sterke_kanten_Planning" value="Planning">Planning</label>
+<label> <input type="checkbox" name="Sterke_kanten_Samenwerken" value="Samenwerken">Samenwerken</label>
 
 </fieldset>
 
 <fieldset>
 <legend>Nog te ontwikkelen?</legend>
 <p>Aan welke skills moet je nog wat extra aandacht besteden?</p> 
-<input type="checkbox" name="ontwikkelen_HTML"  value="Coderen in HTML/CSS">Coderen in HTML/CSS
-<input type="checkbox" name="ontwikkelen_Java" value="Programmeren in Java">Programmeren in Java 
-<input type="checkbox" name="ontwikkelen_JS" value="Scripting: Programmeren in Javascript">Scripting: Programmeren in Javascript
-<input type="checkbox" name="ontwikkelen_Planning" value="Planning">Planning
-<input type="checkbox" name="ontwikkelen_Samenwerken" value="Samenwerken">Samenwerken
+<label> <input type="checkbox" name="ontwikkelen_HTML"  value="Coderen in HTML/CSS">Coderen in HTML/CSS</label>
+<label> <input type="checkbox" name="ontwikkelen_Java" value="Programmeren in Java">Programmeren in Java </label>
+<label> <input type="checkbox" name="ontwikkelen_JS" value="Scripting: Programmeren in Javascript">Scripting: Programmeren in Javascript</label>
+<label> <input type="checkbox" name="ontwikkelen_Planning" value="Planning">Planning</label>
+<label> <input type="checkbox" name="ontwikkelen_Samenwerken" value="Samenwerken">Samenwerken</label>
 </fieldset>
 
 <fieldset>
@@ -128,39 +145,40 @@ li {
 
 <p>Wat vind je het leukste vak tot nu toe?</p>
 
-<input type="checkbox" name="vak_PRO1" value="PRO1">PRO1
-<input type="checkbox" name="vak_PRO2" value="PRO2">PRO2
-<input type="checkbox" name="vak_SLB" value="SLB">SLB
-<input type="checkbox" name="vak_NED" value="NED">NED
-<input type="checkbox" name="vak_ENG" value="ENG">ENG
-<input type="checkbox" name="vak_PROJ" value="PROJ">PROJ
-<input type="checkbox" name="vak_TPR" value="TPR">TPR
-<input type="checkbox" name="vak_WVO" value="WVO">WVO
-<input type="checkbox" name="vak_UXD" value="UXD">UXD
-<input type="checkbox" name="vak_REK" value="REK">REK
+<label> <input type="checkbox" name="vak_PRO1" value="PRO1">PRO1</label>
+<label> <input type="checkbox" name="vak_PRO2" value="PRO2">PRO2</label>
+<label> <input type="checkbox" name="vak_SLB" value="SLB">SLB</label>
+<label> <input type="checkbox" name="vak_NED" value="NED">NED</label>
+<label> <input type="checkbox" name="vak_ENG" value="ENG">ENG</label>
+<label> <input type="checkbox" name="vak_PROJ" value="PROJ">PROJ</label>
+<label> <input type="checkbox" name="vak_TPR" value="TPR">TPR</label>
+<label> <input type="checkbox" name="vak_WVO" value="WVO">WVO</label>
+<label> <input type="checkbox" name="vak_UXD" value="UXD">UXD</label>
+<label> <input type="checkbox" name="vak_REK" value="REK">REK</label>
 
 <p>Met hoeveel zin ga je naar school?</p>
-
-<label id="select"><input id="inputSelect" type="radio" name="zin" value="1">1</label>
-<label id="select"><input id="inputSelect" type="radio" name="zin" value="2">2</label>
-<label id="select"><input id="inputSelect" type="radio" name="zin" value="3">3</label>
-<label id="select"><input id="inputSelect" type="radio" name="zin" value="4">4</label>
-<label id="select"><input id="inputSelect" type="radio" name="zin" value="5">5</label>
-<label id="select"><input id="inputSelect" type="radio" name="zin" value="6">6</label>
-<label id="select"><input id="inputSelect" type="radio" name="zin" value="7">7</label>
-<label id="select"><input id="inputSelect" type="radio" name="zin" value="8">8</label>
-<label id="select"><input id="inputSelect" type="radio" name="zin" value="9">9</label>
-<label id="select"><input id="inputSelect" type="radio" name="zin" value="10">10 </label>
+<div id=zin>
+<label> <input type="radio" name="zin" value="1">1</label>
+<label> <input type="radio" name="zin" value="2">2</label>
+<label> <input type="radio" name="zin" value="3">3</label>
+<label> <input type="radio" name="zin" value="4">4</label>
+<label> <input type="radio" name="zin" value="5">5</label>
+<label> <input type="radio" name="zin" value="6">6</label>
+<label> <input type="radio" name="zin" value="7">7</label>
+<label> <input type="radio" name="zin" value="8">8</label>
+<label> <input type="radio" name="zin" value="9">9</label>
+<label> <input type="radio" name="zin" value="10">10 </label>
+</div>
 </fieldset>
 
 <p>Wat wil je in de toekomst nog doen?</p>
-
+<!--Tekstvak input. -->
 <textarea name="Overige_tekst" rows="10" cols="50" placeholder="Voeg hier nog extra info bij!"></textarea>
-
+<br>
 <input type="submit" value="verstuur">
 
 </form>
-
+<!-- Validatie -->
 <div id="validatie">      
 	<a href="http://validator.w3.org/check?uri=referer" target="_blank">
 	<img src="http://blog.boyet.com/blog/files/media/image/valid-html5-blue.png" alt="Valide HTML5"></a> 
